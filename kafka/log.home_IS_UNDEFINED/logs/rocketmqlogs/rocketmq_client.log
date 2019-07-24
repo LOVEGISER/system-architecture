@@ -1,0 +1,429 @@
+2019-07-12 16:48:06 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 16:48:07 INFO main - Development environment, using built-in client key store.
+2019-07-12 16:48:07 INFO main - user specified name server address: localhost:9876
+2019-07-12 16:48:07 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 16:48:07 INFO main - created a new client Instance, FactoryIndex: 0 ClientID: 172.30.88.190@29012 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.30.88.190, instanceName=29012, clientCallbackExecutorThreads=4, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, heartbeatTimeout=15000, networkTimeout=30000, persistConsumerOffsetInterval=5000, clientType=PRODUCER] V3_2_2
+2019-07-12 16:48:07 INFO main - Netty TCP Connection SSL Enabled.
+2019-07-12 16:48:07 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2019-07-12 16:48:07 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => localhost/127.0.0.1:9876
+2019-07-12 16:48:07 INFO main - createChannel: connect remote host[localhost:9876] success. AbstractBootstrap$PendingRegistrationPromise@6c64cb25(success)
+2019-07-12 16:48:08 INFO PullMessageService - PullMessageService service started
+2019-07-12 16:48:08 INFO RebalanceService - RebalanceService service started
+2019-07-12 16:48:08 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2019-07-12 16:48:08 INFO main - the client factory [172.30.88.190@29012] start OK
+2019-07-12 16:48:08 INFO main - the producer [please_rename_unique_group_name] start OK
+2019-07-12 16:48:08 WARN main - getRouteInfoFromNameServer for topic [TopicTest] failed. Response Code: TOPIC_NOT_EXIST; Remark: No topic route info in name server for the topic: TopicTest
+See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+2019-07-12 16:48:08 ERROR MQClientFactoryScheduledThread - StalkerScheduledTask, adjust trace settings exception
+com.alibaba.rocketmq.client.exception.MQClientException: CODE: 22  DESC: No config item, Namespace: STALKER
+For more information, please visit the url, https://github.com/alibaba/RocketMQ/issues/64
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getKVListByNamespace(MQClientAPIImpl.java:1775)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$7.run(MQClientInstance.java:315)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-12 16:48:08 WARN main - updateTopicRouteInfoFromNameServer Exception
+com.alibaba.rocketmq.client.exception.MQClientException: CODE: 17  DESC: No topic route info in name server for the topic: TopicTest
+See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getTopicRouteInfoFromNameServer(MQClientAPIImpl.java:1459)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:635)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance.updateTopicRouteInfoFromNameServer(MQClientInstance.java:608)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.tryToFindTopicPublishInfo(DefaultMQProducerImpl.java:619)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.sendDefaultImpl(DefaultMQProducerImpl.java:511)
+	at com.alibaba.rocketmq.client.impl.producer.DefaultMQProducerImpl.send(DefaultMQProducerImpl.java:1042)
+	at com.alibaba.rocketmq.client.producer.DefaultMQProducer.send(DefaultMQProducer.java:139)
+	at com.alex.rocketmq.SyncProducer.main(SyncProducer.java:25)
+2019-07-12 16:48:08 INFO main - the topic[TopicTest] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:48:08 INFO main - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+2019-07-12 16:48:08 INFO main - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:48:08 INFO main - createChannel: begin to connect remote host[172.30.88.190:10911] asynchronously
+2019-07-12 16:48:08 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => /172.30.88.190:10911
+2019-07-12 16:48:08 INFO main - createChannel: connect remote host[172.30.88.190:10911] success. AbstractBootstrap$PendingRegistrationPromise@3c19aaa5(success)
+2019-07-12 16:48:08 INFO MQClientFactoryScheduledThread - the topic[TopicTest] route info changed: 
+ old[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=7, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:48:08 INFO MQClientFactoryScheduledThread - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3]], sendWhichQueue=33, haveTopicRouterInfo=true]
+2019-07-12 16:48:08 INFO MQClientFactoryScheduledThread - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3]], sendWhichQueue=33, haveTopicRouterInfo=true]
+2019-07-12 16:48:08 INFO MQClientFactoryScheduledThread - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:48:08 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:48:08 INFO main - unregister client[Producer: please_rename_unique_group_name Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:48:08 INFO main - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:48:08 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2019-07-12 16:48:08 INFO main - shutdown thread PullMessageService interrupt true
+2019-07-12 16:48:08 INFO PullMessageService - PullMessageService service end
+2019-07-12 16:48:08 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2019-07-12 16:48:08 INFO main - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2019-07-12 16:48:08 INFO main - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2019-07-12 16:48:08 INFO main - closeChannel: begin close the channel[172.30.88.190:10911] Found: true
+2019-07-12 16:48:08 INFO main - closeChannel: the channel[172.30.88.190:10911] was removed from channel table
+2019-07-12 16:48:08 INFO main - shutdown thread NettyEventExecutor interrupt false
+2019-07-12 16:48:08 INFO main - join thread NettyEventExecutor eclipse time(ms) 0 90000
+2019-07-12 16:48:08 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2019-07-12 16:48:08 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 16:48:08 INFO main - shutdown thread RebalanceService interrupt false
+2019-07-12 16:48:08 INFO RebalanceService - RebalanceService service end
+2019-07-12 16:48:08 INFO main - join thread RebalanceService eclipse time(ms) 0 90000
+2019-07-12 16:48:08 INFO main - the client factory [172.30.88.190@29012] shutdown OK
+2019-07-12 16:48:08 INFO main - the producer [please_rename_unique_group_name] shutdown OK
+2019-07-12 16:48:08 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 172.30.88.190:10911
+2019-07-12 16:48:08 INFO NettyClientWorkerThread_2 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 16:48:08 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[172.30.88.190:10911] result: true
+2019-07-12 16:48:09 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2019-07-12 16:50:13 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 16:50:14 INFO main - Development environment, using built-in client key store.
+2019-07-12 16:50:14 INFO main - user specified name server address: localhost:9876
+2019-07-12 16:50:14 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 16:50:14 INFO main - created a new client Instance, FactoryIndex: 0 ClientID: 172.30.88.190@29019 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.30.88.190, instanceName=29019, clientCallbackExecutorThreads=4, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, heartbeatTimeout=15000, networkTimeout=30000, persistConsumerOffsetInterval=5000, clientType=PRODUCER] V3_2_2
+2019-07-12 16:50:14 INFO main - Netty TCP Connection SSL Enabled.
+2019-07-12 16:50:14 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2019-07-12 16:50:14 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => localhost/127.0.0.1:9876
+2019-07-12 16:50:14 INFO main - createChannel: connect remote host[localhost:9876] success. AbstractBootstrap$PendingRegistrationPromise@222545dc(success)
+2019-07-12 16:50:14 INFO PullMessageService - PullMessageService service started
+2019-07-12 16:50:14 INFO RebalanceService - RebalanceService service started
+2019-07-12 16:50:14 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2019-07-12 16:50:14 INFO main - the client factory [172.30.88.190@29019] start OK
+2019-07-12 16:50:14 INFO main - the producer [please_rename_unique_group_name] start OK
+2019-07-12 16:50:14 ERROR MQClientFactoryScheduledThread - StalkerScheduledTask, adjust trace settings exception
+com.alibaba.rocketmq.client.exception.MQClientException: CODE: 22  DESC: No config item, Namespace: STALKER
+For more information, please visit the url, https://github.com/alibaba/RocketMQ/issues/64
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getKVListByNamespace(MQClientAPIImpl.java:1775)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$7.run(MQClientInstance.java:315)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-12 16:50:14 INFO main - the topic[TopicTest] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:50:14 INFO main - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+2019-07-12 16:50:14 INFO main - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:50:14 INFO main - createChannel: begin to connect remote host[172.30.88.190:10911] asynchronously
+2019-07-12 16:50:14 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => /172.30.88.190:10911
+2019-07-12 16:50:14 INFO main - createChannel: connect remote host[172.30.88.190:10911] success. AbstractBootstrap$PendingRegistrationPromise@3349e9bb(success)
+2019-07-12 16:50:14 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:50:15 INFO main - unregister client[Producer: please_rename_unique_group_name Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:50:15 INFO main - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:50:15 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2019-07-12 16:50:15 INFO main - shutdown thread PullMessageService interrupt true
+2019-07-12 16:50:15 INFO PullMessageService - PullMessageService service end
+2019-07-12 16:50:15 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2019-07-12 16:50:15 INFO main - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2019-07-12 16:50:15 INFO main - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2019-07-12 16:50:15 INFO main - closeChannel: begin close the channel[172.30.88.190:10911] Found: true
+2019-07-12 16:50:15 INFO main - closeChannel: the channel[172.30.88.190:10911] was removed from channel table
+2019-07-12 16:50:15 INFO main - shutdown thread NettyEventExecutor interrupt false
+2019-07-12 16:50:15 INFO main - join thread NettyEventExecutor eclipse time(ms) 0 90000
+2019-07-12 16:50:15 INFO main - shutdown thread RebalanceService interrupt false
+2019-07-12 16:50:15 INFO RebalanceService - RebalanceService service end
+2019-07-12 16:50:15 INFO main - join thread RebalanceService eclipse time(ms) 1 90000
+2019-07-12 16:50:15 INFO main - the client factory [172.30.88.190@29019] shutdown OK
+2019-07-12 16:50:15 INFO main - the producer [please_rename_unique_group_name] shutdown OK
+2019-07-12 16:50:15 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2019-07-12 16:50:15 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 16:50:15 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2019-07-12 16:50:15 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 172.30.88.190:10911
+2019-07-12 16:50:15 INFO NettyClientWorkerThread_2 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 16:50:15 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[172.30.88.190:10911] result: true
+2019-07-12 16:52:28 INFO main - register consumeMessageHook Hook, DefaultMQPushConsumerTracer
+2019-07-12 16:52:28 INFO main - the consumer [please_rename_unique_group_name] start beginning. messageModel=CLUSTERING, isUnitMode=false
+2019-07-12 16:52:29 INFO main - Development environment, using built-in client key store.
+2019-07-12 16:52:29 INFO main - user specified name server address: localhost:9876
+2019-07-12 16:52:29 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 16:52:29 INFO main - created a new client Instance, FactoryIndex: 0 ClientID: 172.30.88.190@29026 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.30.88.190, instanceName=29026, clientCallbackExecutorThreads=4, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, heartbeatTimeout=15000, networkTimeout=30000, persistConsumerOffsetInterval=5000, clientType=CONSUMER] V3_2_2
+2019-07-12 16:52:29 INFO main - Netty TCP Connection SSL Enabled.
+2019-07-12 16:52:29 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2019-07-12 16:52:29 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => localhost/127.0.0.1:9876
+2019-07-12 16:52:29 INFO main - createChannel: connect remote host[localhost:9876] success. AbstractBootstrap$PendingRegistrationPromise@59662a0b(success)
+2019-07-12 16:52:30 INFO PullMessageService - PullMessageService service started
+2019-07-12 16:52:30 INFO RebalanceService - RebalanceService service started
+2019-07-12 16:52:30 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2019-07-12 16:52:30 INFO main - the client factory [172.30.88.190@29026] start OK
+2019-07-12 16:52:30 INFO main - the consumer [please_rename_unique_group_name] start OK.
+2019-07-12 16:52:30 WARN main - getRouteInfoFromNameServer for topic [%RETRY%please_rename_unique_group_name] failed. Response Code: TOPIC_NOT_EXIST; Remark: No topic route info in name server for the topic: %RETRY%please_rename_unique_group_name
+See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+2019-07-12 16:52:30 INFO main - the topic[TopicTest] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:52:30 INFO main - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:52:30 INFO main - createChannel: begin to connect remote host[172.30.88.190:10911] asynchronously
+2019-07-12 16:52:30 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => /172.30.88.190:10911
+2019-07-12 16:52:30 INFO main - createChannel: connect remote host[172.30.88.190:10911] success. AbstractBootstrap$PendingRegistrationPromise@6771beb3(success)
+2019-07-12 16:52:30 WARN MQClientFactoryScheduledThread - getRouteInfoFromNameServer for topic [%RETRY%please_rename_unique_group_name] failed. Response Code: TOPIC_NOT_EXIST; Remark: No topic route info in name server for the topic: %RETRY%please_rename_unique_group_name
+See https://github.com/alibaba/RocketMQ/issues/55 for further details.
+2019-07-12 16:52:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:52:30 INFO NettyClientPublicExecutor_1 - receive broker's notification[172.30.88.190:10911], the consumer group: please_rename_unique_group_name changed, rebalance immediately
+2019-07-12 16:52:30 INFO main - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:52:30 INFO main - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:52:30 INFO RebalanceService - the topic[%RETRY%please_rename_unique_group_name] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:52:30 INFO RebalanceService - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=1, writeQueueNums=1, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 16:52:30 INFO RebalanceService - DCIndex: 30
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new mq, MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new mq, MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new mq, MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new mq, MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new pull request PullRequest [consumerGroup=please_rename_unique_group_name, messageQueue=MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0], nextOffset=0]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new pull request PullRequest [consumerGroup=please_rename_unique_group_name, messageQueue=MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1], nextOffset=0]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new pull request PullRequest [consumerGroup=please_rename_unique_group_name, messageQueue=MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2], nextOffset=0]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new pull request PullRequest [consumerGroup=please_rename_unique_group_name, messageQueue=MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3], nextOffset=0]
+2019-07-12 16:52:30 INFO RebalanceService - rebalanced allocate source. allocateMessageQueueStrategyName=AVG, group=please_rename_unique_group_name, topic=TopicTest, mqAllSize=4, cidAllSize=1, mqAll=[MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2], MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3]], cidAll=[172.30.88.190@29026]
+2019-07-12 16:52:30 INFO RebalanceService - rebalanced result changed. allocateMessageQueueStrategyName=AVG, group=please_rename_unique_group_name, topic=TopicTest, ConsumerId=172.30.88.190@29026, rebalanceSize=4, rebalanceMqSet=4
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new mq, MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0]
+2019-07-12 16:52:30 INFO RebalanceService - doRebalance, please_rename_unique_group_name, add a new pull request PullRequest [consumerGroup=please_rename_unique_group_name, messageQueue=MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0], nextOffset=0]
+2019-07-12 16:52:30 INFO RebalanceService - rebalanced allocate source. allocateMessageQueueStrategyName=AVG, group=please_rename_unique_group_name, topic=%RETRY%please_rename_unique_group_name, mqAllSize=1, cidAllSize=1, mqAll=[MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0]], cidAll=[172.30.88.190@29026]
+2019-07-12 16:52:30 INFO RebalanceService - rebalanced result changed. allocateMessageQueueStrategyName=AVG, group=please_rename_unique_group_name, topic=%RETRY%please_rename_unique_group_name, ConsumerId=172.30.88.190@29026, rebalanceSize=1, rebalanceMqSet=1
+2019-07-12 16:52:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:52:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:52:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:52:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:52:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:52:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:52:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:53:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:53:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:53:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:53:30 INFO MQClientFactoryScheduledThread - decCorePoolSize Concurrently from 20 to 20, ConsumerGroup: please_rename_unique_group_name
+2019-07-12 16:53:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:53:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:53:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:53:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:53:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:53:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:53:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:53:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:54:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:54:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:54:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:54:30 INFO MQClientFactoryScheduledThread - decCorePoolSize Concurrently from 20 to 20, ConsumerGroup: please_rename_unique_group_name
+2019-07-12 16:54:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:54:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:54:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:54:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:54:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:54:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:54:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:54:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:55:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:55:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:55:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:55:30 INFO MQClientFactoryScheduledThread - decCorePoolSize Concurrently from 20 to 20, ConsumerGroup: please_rename_unique_group_name
+2019-07-12 16:55:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:55:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:55:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:55:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:55:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:55:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:55:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:55:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:56:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:56:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:56:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:56:30 INFO MQClientFactoryScheduledThread - decCorePoolSize Concurrently from 20 to 20, ConsumerGroup: please_rename_unique_group_name
+2019-07-12 16:56:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:56:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:56:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:56:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:56:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:56:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:56:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:56:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:57:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:57:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:57:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:57:30 INFO MQClientFactoryScheduledThread - decCorePoolSize Concurrently from 20 to 20, ConsumerGroup: please_rename_unique_group_name
+2019-07-12 16:57:30 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:57:31 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:57:31 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 16:57:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 50
+2019-07-12 16:57:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=1] 50
+2019-07-12 16:57:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=2] 50
+2019-07-12 16:57:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=TopicTest, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=3] 50
+2019-07-12 16:57:40 INFO MQClientFactoryScheduledThread - Group: please_rename_unique_group_name ClientId: 172.30.88.190@29026 updateConsumeOffsetToBroker MessageQueue [topic=%RETRY%please_rename_unique_group_name, brokerName=wangleigis163comdeMacBook-Pro.local, queueId=0] 0
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [CONSUME_FAILED_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#3]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#0]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#2]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_BATCH_SIZE] [TopicTest[wangleigis163comdeMacBook-Pro.local#1]@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [PULL_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [CONSUME_OK_TPS] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 INFO MQClientFactoryScheduledThread - [CONSUME_RT] [TopicTest@please_rename_unique_group_name] Stats In One Minute, SUM: 0 TPS: 0.00 AVGPT: 0.00
+2019-07-12 16:58:00 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 16:58:01 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 16:58:01 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29026, producerDataSet=[ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[ConsumerData [groupName=please_rename_unique_group_name, consumeType=CONSUME_PASSIVELY, messageModel=CLUSTERING, consumeFromWhere=CONSUME_FROM_LAST_OFFSET, unitMode=false, subscriptionDataSet=[SubscriptionData [classFilterMode=false, topic=%RETRY%please_rename_unique_group_name, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548917], SubscriptionData [classFilterMode=false, topic=TopicTest, subString=*, tagsSet=[], codeSet=[], subVersion=1562921548905]]]]]
+2019-07-12 19:57:52 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 19:57:53 INFO main - Development environment, using built-in client key store.
+2019-07-12 19:57:53 INFO main - user specified name server address: localhost:9876
+2019-07-12 19:57:53 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 19:57:53 INFO main - created a new client Instance, FactoryIndex: 0 ClientID: 172.30.88.190@29817 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.30.88.190, instanceName=29817, clientCallbackExecutorThreads=4, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, heartbeatTimeout=15000, networkTimeout=30000, persistConsumerOffsetInterval=5000, clientType=PRODUCER] V3_2_2
+2019-07-12 19:57:53 INFO main - Netty TCP Connection SSL Enabled.
+2019-07-12 19:57:53 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2019-07-12 19:57:53 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => localhost/127.0.0.1:9876
+2019-07-12 19:57:53 INFO main - createChannel: connect remote host[localhost:9876] success. AbstractBootstrap$PendingRegistrationPromise@6c64cb25(success)
+2019-07-12 19:57:54 INFO PullMessageService - PullMessageService service started
+2019-07-12 19:57:54 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2019-07-12 19:57:54 INFO RebalanceService - RebalanceService service started
+2019-07-12 19:57:54 INFO main - the client factory [172.30.88.190@29817] start OK
+2019-07-12 19:57:54 INFO main - the producer [please_rename_unique_group_name] start OK
+2019-07-12 19:57:54 ERROR MQClientFactoryScheduledThread - StalkerScheduledTask, adjust trace settings exception
+com.alibaba.rocketmq.client.exception.MQClientException: CODE: 22  DESC: No config item, Namespace: STALKER
+For more information, please visit the url, https://github.com/alibaba/RocketMQ/issues/64
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getKVListByNamespace(MQClientAPIImpl.java:1775)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$7.run(MQClientInstance.java:315)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-12 19:57:54 INFO main - the topic[TopicTest] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 19:57:54 INFO main - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+2019-07-12 19:57:54 INFO main - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 19:57:54 INFO main - createChannel: begin to connect remote host[172.30.88.190:10911] asynchronously
+2019-07-12 19:57:54 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => /172.30.88.190:10911
+2019-07-12 19:57:54 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 19:57:54 INFO main - createChannel: connect remote host[172.30.88.190:10911] success. AbstractBootstrap$PendingRegistrationPromise@4562e04d(success)
+2019-07-12 19:57:55 INFO MQClientFactoryScheduledThread - send heart beat to broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 19:57:55 INFO MQClientFactoryScheduledThread - HeartbeatData [clientID=172.30.88.190@29817, producerDataSet=[ProducerData [groupName=please_rename_unique_group_name], ProducerData [groupName=CLIENT_INNER_PRODUCER]], consumerDataSet=[]]
+2019-07-12 19:57:59 INFO main - unregister client[Producer: please_rename_unique_group_name Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 19:57:59 INFO main - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 19:57:59 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2019-07-12 19:57:59 INFO main - shutdown thread PullMessageService interrupt true
+2019-07-12 19:57:59 INFO PullMessageService - PullMessageService service end
+2019-07-12 19:57:59 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2019-07-12 19:57:59 INFO main - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2019-07-12 19:57:59 INFO main - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_1 - closeChannel: the channel[localhost:9876] was removed from channel table
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 19:57:59 INFO main - closeChannel: begin close the channel[172.30.88.190:10911] Found: true
+2019-07-12 19:57:59 INFO main - closeChannel: the channel[172.30.88.190:10911] was removed from channel table
+2019-07-12 19:57:59 INFO main - shutdown thread NettyEventExecutor interrupt false
+2019-07-12 19:57:59 INFO main - join thread NettyEventExecutor eclipse time(ms) 0 90000
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 172.30.88.190:10911
+2019-07-12 19:57:59 INFO NettyClientWorkerThread_2 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 19:57:59 INFO main - shutdown thread RebalanceService interrupt false
+2019-07-12 19:57:59 INFO RebalanceService - RebalanceService service end
+2019-07-12 19:57:59 INFO main - join thread RebalanceService eclipse time(ms) 0 90000
+2019-07-12 19:57:59 INFO main - the client factory [172.30.88.190@29817] shutdown OK
+2019-07-12 19:57:59 INFO main - the producer [please_rename_unique_group_name] shutdown OK
+2019-07-12 19:57:59 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2019-07-12 19:57:59 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[172.30.88.190:10911] result: true
+2019-07-12 19:57:59 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2019-07-12 19:58:29 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 19:58:30 INFO main - Development environment, using built-in client key store.
+2019-07-12 19:58:30 INFO main - user specified name server address: localhost:9876
+2019-07-12 19:58:30 INFO main - register sendMessage Hook, DefaultMQProducerTracer
+2019-07-12 19:58:30 INFO main - created a new client Instance, FactoryIndex: 0 ClientID: 172.30.88.190@29830 ClientConfig [namesrvAddr=localhost:9876, clientIP=172.30.88.190, instanceName=29830, clientCallbackExecutorThreads=4, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, heartbeatTimeout=15000, networkTimeout=30000, persistConsumerOffsetInterval=5000, clientType=PRODUCER] V3_2_2
+2019-07-12 19:58:30 INFO main - Netty TCP Connection SSL Enabled.
+2019-07-12 19:58:30 INFO main - createChannel: begin to connect remote host[localhost:9876] asynchronously
+2019-07-12 19:58:30 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => localhost/127.0.0.1:9876
+2019-07-12 19:58:30 INFO main - createChannel: connect remote host[localhost:9876] success. AbstractBootstrap$PendingRegistrationPromise@6c64cb25(success)
+2019-07-12 19:58:31 INFO PullMessageService - PullMessageService service started
+2019-07-12 19:58:31 INFO RebalanceService - RebalanceService service started
+2019-07-12 19:58:31 INFO main - the producer [CLIENT_INNER_PRODUCER] start OK
+2019-07-12 19:58:31 INFO main - the client factory [172.30.88.190@29830] start OK
+2019-07-12 19:58:31 INFO main - the producer [please_rename_unique_group_name] start OK
+2019-07-12 19:58:31 ERROR MQClientFactoryScheduledThread - StalkerScheduledTask, adjust trace settings exception
+com.alibaba.rocketmq.client.exception.MQClientException: CODE: 22  DESC: No config item, Namespace: STALKER
+For more information, please visit the url, https://github.com/alibaba/RocketMQ/issues/64
+	at com.alibaba.rocketmq.client.impl.MQClientAPIImpl.getKVListByNamespace(MQClientAPIImpl.java:1775)
+	at com.alibaba.rocketmq.client.impl.factory.MQClientInstance$7.run(MQClientInstance.java:315)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-12 19:58:31 INFO main - the topic[TopicTest] route info changed: 
+ old[null]; 
+ new[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 19:58:31 INFO main - updateTopicPublishInfo prev is not null, TopicPublishInfo [orderTopic=false, messageQueueList=[], sendWhichQueue=0, haveTopicRouterInfo=false]
+2019-07-12 19:58:31 INFO main - topicRouteTable.put TopicRouteData[TopicRouteData [orderTopicConf=null, queueDatas=[QueueData [brokerName=wangleigis163comdeMacBook-Pro.local, readQueueNums=4, writeQueueNums=4, perm=6, topicSynFlag=0]], brokerDatas=[BrokerData [brokerName=wangleigis163comdeMacBook-Pro.local, brokerAddrs={0=172.30.88.190:10911}]], filterServerTable={}]]
+2019-07-12 19:58:31 INFO main - createChannel: begin to connect remote host[172.30.88.190:10911] asynchronously
+2019-07-12 19:58:31 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CONNECT  UNKNOWN => /172.30.88.190:10911
+2019-07-12 19:58:31 INFO main - createChannel: connect remote host[172.30.88.190:10911] success. AbstractBootstrap$PendingRegistrationPromise@2a3b5b47(success)
+2019-07-12 19:58:31 INFO main - unregister client[Producer: please_rename_unique_group_name Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 19:58:31 INFO main - unregister client[Producer: CLIENT_INNER_PRODUCER Consumer: null] from broker[wangleigis163comdeMacBook-Pro.local 0 172.30.88.190:10911] success
+2019-07-12 19:58:31 INFO main - the producer [CLIENT_INNER_PRODUCER] shutdown OK
+2019-07-12 19:58:31 INFO main - shutdown thread PullMessageService interrupt true
+2019-07-12 19:58:31 INFO PullMessageService - PullMessageService service end
+2019-07-12 19:58:31 INFO main - join thread PullMessageService eclipse time(ms) 0 90000
+2019-07-12 19:58:31 INFO main - closeChannel: begin close the channel[127.0.0.1:9876] Found: false
+2019-07-12 19:58:31 WARN MQClientFactoryScheduledThread - updateTopicRouteInfoFromNameServer, getTopicRouteInfoFromNameServer return null, Topic: TBW102
+2019-07-12 19:58:31 INFO main - closeChannel: the channel[127.0.0.1:9876] has been removed from the channel table before
+2019-07-12 19:58:31 INFO main - closeChannel: begin close the channel[172.30.88.190:10911] Found: true
+2019-07-12 19:58:31 INFO NettyClientWorkerThread_1 - NETTY CLIENT PIPELINE: CLOSE 127.0.0.1:9876
+2019-07-12 19:58:31 INFO main - closeChannel: the channel[172.30.88.190:10911] was removed from channel table
+2019-07-12 19:58:31 INFO NettyClientWorkerThread_2 - NETTY CLIENT PIPELINE: CLOSE 172.30.88.190:10911
+2019-07-12 19:58:31 INFO NettyClientWorkerThread_2 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 19:58:31 INFO main - shutdown thread NettyEventExecutor interrupt false
+2019-07-12 19:58:31 INFO main - join thread NettyEventExecutor eclipse time(ms) 0 90000
+2019-07-12 19:58:31 INFO main - shutdown thread RebalanceService interrupt false
+2019-07-12 19:58:31 INFO RebalanceService - RebalanceService service end
+2019-07-12 19:58:31 INFO main - join thread RebalanceService eclipse time(ms) 0 90000
+2019-07-12 19:58:31 INFO main - the client factory [172.30.88.190@29830] shutdown OK
+2019-07-12 19:58:31 INFO main - the producer [please_rename_unique_group_name] shutdown OK
+2019-07-12 19:58:31 INFO NettyClientWorkerThread_1 - eventCloseChannel: the channel[null] has been removed from the channel table before
+2019-07-12 19:58:31 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[127.0.0.1:9876] result: true
+2019-07-12 19:58:31 INFO NettyClientSelector_1 - closeChannel: close the connection to remote address[172.30.88.190:10911] result: true

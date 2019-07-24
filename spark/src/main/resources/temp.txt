@@ -1,0 +1,8 @@
+ #export SCALA_HOME=/usr/local/Cellar/scala/2.12.8
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home  #这里是你jdk的安装路径
+export SPARK_HOME=/Users/wangleigis163.com/Documents/alex/dev/evn/spark-2.4.3-bin-hadoop2.7
+export SPARK_MASTER_IP=127.0.0.1  #将这里的xxx改为自己的Linux的ip地址
+#export SPARK_EXECUTOR_MEMORY=512M
+#export SPARK_WORKER_MEMORY=1G
+#export master=spark://127.0.0.1:7070
+ 

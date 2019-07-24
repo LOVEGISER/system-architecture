@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <cache name="user"  eternal="true" overflowToDisk="true"   maxElementsInMemory="1000"/>
+</ehcache>
