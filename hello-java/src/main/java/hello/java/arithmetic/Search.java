@@ -6,7 +6,8 @@ public class Search {
         int high = array.length - 1;
         int mid;
         while (low <= high) {
-            mid = (low + high) / 2;//中间位置
+            mid = (  high- low) / 2 +low;//中间位置
+           // mid = (low + high) / 2;//中间位置
             if (array[mid] == a) {
                 return mid;
             } else if (a > array[mid]) { //向右查找
@@ -22,6 +23,6 @@ public class Search {
 
     public static void main(String[] args) {
         int[] myList = {1, 2, 3, 4, 6, 7};
-        System.out.println(binarySearch(myList, 61));
+        System.out.println(binarySearch(myList, 4));
     }
 }
