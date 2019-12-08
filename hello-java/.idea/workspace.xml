@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ffc25f8-8232-4fae-a064-8033f10c2557" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/java/concurrent/AtomicDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/java/concurrent/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/java/test/Main.java" afterDir="false" />
+    <list default="true" id="7ffc25f8-8232-4fae-a064-8033f10c2557" name="Default Changelist" comment="1：">
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/KafkaConsumerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/KafkaSink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/ProcessMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/kafka/YMKafkaSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flink/stream/src/main/resources/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flink/stream/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flink/stream/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/ymclick/ContinueTriggerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flink/stream/src/main/java/com/alex/flink/stream/ymclick/ContinueTriggerDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/java/arithmetic/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello/java/arithmetic/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/java/concurrent/AtomicDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello/java/concurrent/AtomicDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../manager-system/web-service" beforeDir="false" afterPath="$PROJECT_DIR$/../manager-system/web-service" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="504">
               <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,16 +42,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/test/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/concurrent/AtomicDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="144">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding>
                 <element signature="e#167#168#0" expanded="true" />
                 <element signature="e#197#198#0" expanded="true" />
@@ -56,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/concurrent/Person.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -64,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2107">
+            <state relative-caret-position="2040">
               <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -109,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/arithmetic/Search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="301">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -146,6 +154,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/java/test/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/java/concurrent/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/java/concurrent/AtomicDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/java/arithmetic/Search.java" />
       </list>
     </option>
   </component>
@@ -158,8 +167,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-67" />
+    <option name="x" value="187" />
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -169,7 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,52 +185,20 @@
               <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
               <item name="hello-java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hello-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hello-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hello-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hello-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hello-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564139097425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574411678770" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -243,26 +219,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AtomicDemo">
+  <component name="RunManager" selected="Application.Search">
     <configuration name="AtomicDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hello.java.concurrent.AtomicDemo" />
       <module name="java-base" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hello.java.concurrent.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsistentHashingWithoutVirtualNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hello.java.arithmetic.hash.ConsistentHashingWithoutVirtualNode" />
-      <module name="java-base" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hello.java.arithmetic.hash.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -302,6 +265,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hello.java.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.java.arithmetic.Search" />
+      <module name="hello-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.java.arithmetic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -373,11 +349,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Search" />
         <item itemvalue="Application.AtomicDemo" />
         <item itemvalue="Application.MemoryMapTest" />
         <item itemvalue="Application.MyClient" />
         <item itemvalue="Application.MyServer" />
-        <item itemvalue="Application.ConsistentHashingWithoutVirtualNode" />
       </list>
     </recent_temporary>
   </component>
@@ -397,16 +373,26 @@
       <workItem from="1563155435741" duration="21000" />
       <workItem from="1563526804230" duration="6259000" />
       <workItem from="1564124531602" duration="2257000" />
+      <workItem from="1574410285601" duration="1272000" />
     </task>
+    <task id="LOCAL-00001" summary="1：binarySearch optimize">
+      <created>1574411669235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574411669235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12552000" />
+    <option name="totallyTimeSpent" value="13824000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-67" width="1440" height="900" extended-state="0" />
+    <frame x="187" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18669528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18884121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -446,6 +432,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1：binarySearch optimize" />
+    <option name="LAST_COMMIT_MESSAGE" value="1：binarySearch optimize" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/arithmetic/Sort.java">
@@ -517,6 +507,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/test/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/concurrent/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/nio/channels/FileChannel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2928">
@@ -545,55 +569,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/arithmetic/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2107">
-          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/nio/MyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/test/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/concurrent/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/concurrent/AtomicDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="144">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding>
             <element signature="e#167#168#0" expanded="true" />
             <element signature="e#197#198#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/java/arithmetic/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>

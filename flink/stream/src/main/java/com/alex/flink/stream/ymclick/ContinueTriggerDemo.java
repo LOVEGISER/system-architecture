@@ -1,7 +1,6 @@
 package com.alex.flink.stream.ymclick;
 
-import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.joran.JoranConfigurator;
+
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.java.tuple.Tuple3;
@@ -23,20 +22,20 @@ import java.util.Date;
 
 public class ContinueTriggerDemo {
     final  static Logger logger = LoggerFactory.getLogger(ContinueTriggerDemo.class);
-    public static void loadCofig() {
-        try {
-            LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
-            JoranConfigurator jconfig = new JoranConfigurator();
-            jconfig.setContext(lc);
-            lc.reset();
-            jconfig.doConfigure(ContinueTriggerDemo.class.getClassLoader().getResourceAsStream("logback.xml"));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+//    public static void loadCofig() {
+//        try {
+//            LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+//            JoranConfigurator jconfig = new JoranConfigurator();
+//            jconfig.setContext(lc);
+//            lc.reset();
+//            jconfig.doConfigure(ContinueTriggerDemo.class.getClassLoader().getResourceAsStream("logback.xml"));
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void main(String[] args) throws Exception {
-       loadCofig();
+
         String hostName = "localhost";
         Integer port = Integer.parseInt("8001");
         // set up the execution environment
